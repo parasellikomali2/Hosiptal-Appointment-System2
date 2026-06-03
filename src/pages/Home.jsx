@@ -1,10 +1,10 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../Components/Navbar";
 import HeroVideo from "../Components/HeroVideo";
-import HealthScanner from "../components/HealthScanner";
+import HealthScanner from "../Components/HealthScanner";
 import HospitalTour3D from "../Components/HospitalTour3D";
-import Innovation from "../components/Innovation";
-import Appointment from "../components/Appointment";
-import Footer from "../components/Footer";
+import Innovation from "../Components/Innovation";
+import Appointment from "../Components/Appointment";
+import Footer from "../Components/Footer";
 
 function Home() {
   return (
