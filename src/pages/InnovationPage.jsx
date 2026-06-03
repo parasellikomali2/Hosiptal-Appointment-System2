@@ -1,6 +1,6 @@
-import Navbar from "../components/Navbar";
-import Innovation from "../components/Innovation";
-import Footer from "../components/Footer";
+import Navbar from "../ComponentS/Navbar";
+import Innovation from "../Components/Innovation";
+import Footer from "../Components/Footer";
 
 function InnovationPage() {
   return (
