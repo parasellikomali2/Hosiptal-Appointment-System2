@@ -1,0 +1,156 @@
+.scanner-section {
+  padding: 100px 8%;
+  background: #050b1a;
+  color: white;
+  position: relative;
+}
+
+.scanner-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.scanner-tag {
+  background: rgba(0, 255, 255, 0.15);
+  color: cyan;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.scanner-header h2 {
+  font-size: 3.5rem;
+  margin-top: 20px;
+  font-weight: 800;
+}
+
+.scanner-header h2 span {
+  color: cyan;
+}
+
+.scanner-header p {
+  max-width: 700px;
+  margin: 20px auto;
+  color: #cfd8dc;
+  line-height: 1.8;
+}
+
+.scanner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+.scanner-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  overflow: hidden;
+  transition: 0.5s;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.scanner-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0,255,255,0.2);
+}
+
+.scanner-image {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.scanner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.scanner-card:hover img {
+  transform: scale(1.1);
+}
+
+.scanner-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 65px;
+  height: 65px;
+  background: rgba(0,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.scanner-content {
+  padding: 25px;
+}
+
+.scanner-content h3 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.scanner-content p {
+  color: #b0bec5;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.scan-btn {
+  width: 100%;
+  border: none;
+  padding: 14px;
+  border-radius: 50px;
+  background: linear-gradient(
+    135deg,
+    #00e5ff,
+    #0099ff
+  );
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.scan-btn:hover {
+  transform: scale(1.03);
+}
+.analysis-result {
+  margin-top: 50px;
+  padding: 30px;
+  background: rgba(0,255,255,0.08);
+  border: 1px solid rgba(0,255,255,0.3);
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease;
+}
+
+.analysis-result h3 {
+  color: cyan;
+  margin-bottom: 15px;
+}
+
+.analysis-result p {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,167 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 8%;
+  transition: 0.4s ease;
+
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-container.scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.logo-icon {
+  color: #2563eb;
+  font-size: 2rem;
+
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%{
+    transform: scale(1);
+  }
+
+  50%{
+    transform: scale(1.15);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+
+  bottom: -6px;
+  left: 0;
+
+  background: #2563eb;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.login-btn {
+  padding: 10px 24px;
+  border-radius: 30px;
+
+  border: 2px solid #2563eb;
+
+  color: #2563eb;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.login-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.register-btn {
+  padding: 10px 24px;
+  border-radius: 30px;
+
+  background: linear-gradient(
+      135deg,
+      #2563eb,
+      #06b6d4
+  );
+
+  color: white;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.mobile-btn {
+  display: none;
+}
+
+@media(max-width:992px){
+
+  .menu-icon{
+    display:block;
+  }
+
+  .navbar-buttons{
+    display:none;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:100%;
+    left:-100%;
+
+    width:100%;
+    height:90vh;
+
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:white;
+
+    transition:.4s;
+  }
+
+  .nav-links.active{
+    left:0;
+  }
+
+  .mobile-btn{
+    display:block;
+  }
+}

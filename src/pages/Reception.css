@@ -1,0 +1,89 @@
+.room-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f4f9ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.room-page img {
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+
+.room-page h1 {
+  font-size: 3rem;
+  color: #0a4d8c;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.room-page p {
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.room-info {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.room-info h3 {
+  color: #0a4d8c;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.room-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.room-info ul li {
+  background: #eef7ff;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-left: 5px solid #0a4d8c;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.room-info ul li:hover {
+  transform: translateX(8px);
+  background: #dbefff;
+}
+
+@media (max-width: 768px) {
+  .room-page h1 {
+    font-size: 2rem;
+  }
+
+  .room-page img {
+    height: 250px;
+  }
+
+  .room-page p {
+    font-size: 1rem;
+  }
+
+  .room-info {
+    padding: 20px;
+  }
+}

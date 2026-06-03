@@ -1,0 +1,39 @@
+.appointment-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  padding: 15px 25px;
+  border-radius: 50px;
+
+  background: #2563eb;
+  z-index: 1000;
+}
+
+.appointment-popup {
+  position: fixed;
+
+  right: 20px;
+  bottom: 90px;
+
+  width: 320px;
+
+  background: white;
+  padding: 20px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+
+  z-index: 1000;
+}
+
+.appointment-popup input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+}

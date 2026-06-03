@@ -1,0 +1,141 @@
+.footer {
+  background: #081028;
+  color: white;
+  padding-top: 80px;
+  margin-top: 50px;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+}
+
+.footer-section h3 {
+  margin-bottom: 20px;
+  color: #00d9ff;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00d9ff;
+  margin-bottom: 20px;
+}
+
+.footer-section p {
+  color: #c7d0dd;
+  line-height: 1.7;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  color: #c7d0dd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #00d9ff;
+  padding-left: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.4s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  background: #00d9ff;
+  color: #081028;
+}
+
+.contact-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: #c7d0dd;
+}
+
+.newsletter {
+  margin-top: 60px;
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255,255,255,0.04);
+}
+
+.newsletter h3 {
+  margin-bottom: 20px;
+}
+
+.newsletter-box {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+.newsletter-box input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.newsletter-box button {
+  padding: 15px 30px;
+  border: none;
+  background: #00d9ff;
+  color: #081028;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: #9fb0c7;
+}
+
+@media (max-width: 768px) {
+  .newsletter-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter-box input,
+  .newsletter-box button {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
