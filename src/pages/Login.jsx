@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaHeartbeat } from "react-icons/fa";
 import axios from "axios";
-import "../style/Auth.css";
+import "../Style/Auth.css";
 
 function Login() {
   const navigate = useNavigate();
