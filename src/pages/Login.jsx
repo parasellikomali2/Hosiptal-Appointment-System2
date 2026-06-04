@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaHeartbeat } from "react-icons/fa";
-import axios from "axios";
 import "./Auth.css";
 
 function Login() {
@@ -29,26 +28,35 @@ function Login() {
     try {
       setLoading(true);
 
-      const res = await axios.post(
+      const response = await fetch(
         "http://localhost:5000/api/auth/login",
-        formData
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
       );
 
-      localStorage.setItem("token", res.data.token);
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Login Failed");
+      }
+
+      localStorage.setItem("token", data.token);
 
       localStorage.setItem(
         "user",
-        JSON.stringify(res.data.user)
+        JSON.stringify(data.user)
       );
 
       alert("Login Successful");
 
-      navigate("/Home");
+      navigate("/home");
     } catch (error) {
-      alert(
-        error?.response?.data?.message ||
-          "Login Failed"
-      );
+      alert(error.message);
     } finally {
       setLoading(false);
     }
@@ -99,6 +107,7 @@ function Login() {
           </div>
 
           <button
+            type="submit"
             className="auth-btn"
             disabled={loading}
           >
@@ -107,16 +116,12 @@ function Login() {
         </form>
 
         <div className="auth-footer">
-          Don't have an account?
-
-          <Link to="/register">
-            Register
-          </Link>
-
-  
-
-         
-
+          <p>
+            Don't have an account?{" "}
+            <Link to="/register">
+              Register
+            </Link>
+          </p>
         </div>
       </div>
     </div>
