@@ -25,7 +25,7 @@ function Register() {
 
     try {
       await axios.post(
-        "https://hosiptal-appointment-system5.onrender.com/api/auth/register",
+        "https://hosiptal-appointment-system.vercel.app/api/auth/register",
         formData
       );
 
