@@ -29,7 +29,7 @@ function Login() {
       setLoading(true);
 
       const response = await fetch(
-        "https://hosiptal-appointment-system.vercel.app//api/auth/login",
+        "https://hosiptal-appointment-system7.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: {
